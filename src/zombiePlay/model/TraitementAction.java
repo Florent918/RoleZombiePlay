@@ -67,18 +67,15 @@ public class TraitementAction {
 			
 			return null;
 		}
-		public Personnage userChoice(int player) {
-			System.out.println(String.format("Bienvenue.....\nJoueur %s choisis ta classe :\n1 - Caissier\n2 - Pompier\n3 - Flic\n4 - Clodo",player));
-			Scanner sc = new Scanner(System.in);
-			userInput = sc.nextLine();
-			switch(userInput.toCharArray()[0]) {
-				case '1':
+		public Personnage userChoice(String choice) {
+			switch(choice) {
+				case "Caissier":
 					return personnageFactory.createCashier();
-				case '2':
+				case "Pompier":
 					return personnageFactory.createFireFighter();
-				case '3':
+				case "Flic":
 					return personnageFactory.createCop();
-				case '4':
+				case "Clodo":
 					return personnageFactory.createHobo();		
 				default :
 					break;

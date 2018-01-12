@@ -10,6 +10,6 @@ public class RoleZombiePlay {
 			 */
 			Game game = new Game();
 			game.play();
-			System.exit(1);
+			//System.exit(1);
 		}
 }
